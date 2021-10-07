@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db.changelog/createTable.sql
+  - include:
+      file: db.changelog/loadData.sql
+  - include:
+      file: db.changelog/rollBack.sql
+  - include:
+      file: db.changelog/rollBack.sql

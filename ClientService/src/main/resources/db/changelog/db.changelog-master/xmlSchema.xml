@@ -1,0 +1,69 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+<changeSet id="1" author="T">
+    <createTable tableName="client">
+        <column name="id" type="bigint" >
+            <constraints primaryKey="true" nullable="false" />
+        </column>
+        <column name="name" type="character varying">
+        </column>
+        <column name="surname" type="character varying">
+        </column>
+        <column name="address" type="character varying">
+        </column>
+        <column name="email" type="character varying">
+        </column>
+        <column name="birthDate" type="datetime">
+        </column>
+        <column name="patronymic" type="character varying">
+        </column>
+        <column name="phone" type="character varying">
+        </column>
+    </createTable>
+</changeSet>
+<changeSet id="2" author="s">
+        <rollback changeSetId="1"></rollback>
+</changeSet>
+    <changeSet id="3" author="T">
+        <createTable tableName="client">
+            <column name="id" type="bigint" >
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="character varying">
+                <constraints nullable="false"/>
+            </column>
+            <column name="surname" type="character varying">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="character varying">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="character varying">
+                <constraints nullable="false"/>
+            </column>
+            <column name="birthDate" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="patronymic" type="character varying">
+                <constraints nullable="true"/>
+            </column>
+            <column name="phone" type="character varying">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="4" author="I">
+    <insert tableName="Client">
+        <column name="id" value="1"/>
+        <column name="name" value="Stepan"></column>
+        <column name="birthDate" value="1999-06-30"></column>
+        <column name="address" value="realAddr"></column>
+        <column name="email" value="step@y.ru"/>
+        <column name="patronymic" value="alex"/>
+        <column name="surname" value="bogdanov"/>
+        <column name="phone" value="453635"/>
+    </insert>
+</changeSet>
+</databaseChangeLog>
