@@ -1,0 +1,25 @@
+
+security.oauth2.client.clientId= 327618474552-276f7jql883rfnof0jedndc105e2t0oc.apps.googleusercontent.com
+security.oauth2.client.clientSecret=M6J_3Cb9d-AgzdxDsKlmMNdE
+security.oauth2.client.accessTokenUri=https://www.googleapis.com/oauth2/v4/token
+security.oauth2.client.userAuthorizationUri=https://accounts.google.com/o/oauth2/v2/auth
+security.oauth2.client.clientAuthenticationScheme=form
+security.oauth2.client.scope=openid,email
+security.oauth2.resource.userInfoUri=https://www.googleapis.com/oauth2/v3/userinfo
+security.oauth2.resource.preferTokenInfo=true
+
+
+server.servlet.session.cookie.name= UISESSION
+spring.security.oauth2.client.registration.custom-client.client-id= R2dpxQ3vPrtfgF72
+spring.security.oauth2.client.registration.custom-client.client-secret= fDw7Mpkk5czHNuSRtmhGmAGL42CaxQB9
+spring.security.oauth2.client.registration.custom-client.client-name= Auth Server
+spring.security.oauth2.client.registration.custom-client.scope= user_info
+spring.security.oauth2.client.registration.custom-client.provider= custom-provider
+spring.security.oauth2.client.registration.custom-client.redirect-uri= http://localhost:8086
+spring.security.oauth2.client.registration.custom-client.client-authentication-method= basic
+spring.security.oauth2.client.registration.custom-client.authorization-grant-type= authorization_code
+
+spring.security.oauth2.client.provider.custom-provider.token-uri= http://localhost:8082/auth/oauth/token
+spring.security.oauth2.client.provider.custom-provider.authorization-uri= http://localhost:8082/auth/oauth/authorize
+spring.security.oauth2.client.provider.custom-provider.user-info-uri= http://localhost:8082/auth/user/me
+spring.security.oauth2.client.provider.custom-provider.user-name-attribute= name
