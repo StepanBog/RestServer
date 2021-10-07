@@ -43,6 +43,11 @@ Swagger документация: https://app.swaggerhub.com/apis/StepanBog/REST
   4. Для каждого модуля в файле application.properties указать информацию для подключения к базе данных: spring.datasource.url,spring.datasource.username,spring.datasource.password (Для текущей версии необходимо использование базы данных MySQL);
   5. Собрать каждый модуль используя maven: mvn clean package;
   6. Разместить собранный jar файл на сервере.
+
+Рекомендуема последовательность запуска сервисов:
+  1. EurekaService;
+  2. ClientServie, ItemService, BucketService, OrderService;
+  3. ProxyServer.
  
 #Минимальные системные требования
 
